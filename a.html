@@ -2,9 +2,22 @@
 <head>
 <script>
 function q() {
-    var x = eval(prompt("enter a number 1"));
+    var x = prompt("enter a number 1");
+    if (isNaN(x) || x === "") {
+        document.write("لطفاً یک عدد معتبر وارد کن!");
+        return;
+    }
+    x = eval(x);
+    
     var y = prompt("enter a +, -, *, /");
-    var z = eval(prompt("enter a number 2"));
+    
+    var z = prompt("enter a number 2");
+    if (isNaN(z) || z === "") {
+        document.write("لطفاً یک عدد معتبر وارد کن!");
+        return;
+    }
+    z = eval(z);
+    
     switch (y) {
         case "+":
             document.write(x + z);
