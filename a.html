@@ -9,7 +9,7 @@ function q() {
     }
     x = eval(x);
     
-    var y = prompt("enter a +, *, /");
+    var y = prompt("enter a +, -, *, /");
     
     var z = prompt("enter a number 2");
     if (isNaN(z) || z === "") {
@@ -21,6 +21,9 @@ function q() {
     switch (y) {
         case "+":
             document.write(x + z);
+            break;
+        case "-":
+            document.write(x - z);
             break;
         case "*":
             document.write(x * z);
